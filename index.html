@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Dias - Portfolio</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <nav class="nav">
+  <div class="logo">&lt;Lucas Dias/&gt;</div>
+  <div class="nav-links">
+    <a href="#hero">início</a>
+    <a href="#skills">skills</a>
+    <a href="#projects">projetos</a>
+    <a href="#contact">contato</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#hero" onclick="closeMenu()">início</a>
+  <a href="#skills" onclick="closeMenu()">skills</a>
+  <a href="#projects" onclick="closeMenu()">projetos</a>
+  <a href="#contact" onclick="closeMenu()">contato</a>
+</div>
+
+<div class="grad-line"></div>
+
+<section class="hero" id="hero">
+  <div>
+    <div class="hero-badge">disponível para projetos</div>
+    <h1 class="hero-title">
+      Olá, sou<br>
+      <span class="grad-text">Lucas Dias</span><br>
+      dev frontend.
+    </h1>
+    <p class="hero-sub">Frontend Developer especializado em interfaces funcionais de alto padrão.</p>
+    <div class="btns">
+      <button class="btn-main" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">ver projetos →</button>
+      <button class="btn-ghost">baixar CV</button>
+    </div>
+  </div>
+  <div class="avatar-area">
+    <div class="avatar-wrap">
+      <div class="avatar-ring">
+        <div class="avatar-inner">
+          <div class="avatar-initials">LD</div>
+          <div class="avatar-role">frontend dev</div>
+        </div>
+      </div>
+      <div class="float-badge tl"><span class="dot" style="background:#E34F26;"></span>HTML5</div>
+      <div class="float-badge br"><span class="dot" style="background:#F7DF1E;"></span>JavaScript</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="skills" id="skills">
+  <div class="sec-label">// habilidades</div>
+  <h2 class="sec-title">As tecnologias<br>que <span class="grad-text">domino</span>.</h2>
+  <div class="skills-row">
+    <div class="sk">
+      <div class="sk-bar"><div class="sk-fill" style="width:92%;"></div></div>
+      <div class="sk-icon" style="color:#E34F26;">&lt;/&gt;</div>
+      <div class="sk-name">HTML5</div>
+      <div class="sk-pills"><span class="pill">Semântica</span><span class="pill">A11y</span><span class="pill">SEO</span></div>
+    </div>
+    <div class="sk">
+      <div class="sk-bar"><div class="sk-fill" style="width:87%;"></div></div>
+      <div class="sk-icon" style="color:#6B8EF7;">#{ }</div>
+      <div class="sk-name">CSS3</div>
+      <div class="sk-pills"><span class="pill">Grid</span><span class="pill">Flexbox</span><span class="pill">Sass</span></div>
+    </div>
+    <div class="sk">
+      <div class="sk-bar"><div class="sk-fill" style="width:80%;"></div></div>
+      <div class="sk-icon" style="color:#F7DF1E;">JS</div>
+      <div class="sk-name">JavaScript</div>
+      <div class="sk-pills"><span class="pill">ES6+</span><span class="pill">APIs</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="sec-label">// projetos</div>
+  <h2 class="sec-title" style="margin-bottom:2rem;">O que já <span class="grad-text">construí</span>.</h2>
+  <div class="proj-grid">
+    <div class="proj">
+      <div class="proj-header"><span class="proj-num">01 —</span><span class="proj-arrow">↗</span></div>
+      <div class="proj-title">E-commerce UI Kit</div>
+      <div class="proj-desc">Componentes reutilizáveis para lojas virtuais com foco em conversão e UX.</div>
+      <div class="proj-tags"><span class="ptag h">HTML</span><span class="ptag c">CSS</span><span class="ptag j">JS</span></div>
+    </div>
+    <div class="proj">
+      <div class="proj-header"><span class="proj-num">02 —</span><span class="proj-arrow">↗</span></div>
+      <div class="proj-title">Dashboard Analytics</div>
+      <div class="proj-desc">Painel interativo com gráficos em tempo real e filtros dinâmicos via API.</div>
+      <div class="proj-tags"><span class="ptag c">CSS</span><span class="ptag j">JS</span></div>
+    </div>
+    <div class="proj">
+      <div class="proj-header"><span class="proj-num">03 —</span><span class="proj-arrow">↗</span></div>
+      <div class="proj-title">Landing SaaS</div>
+      <div class="proj-desc">Página de alta conversão, 98+ Lighthouse e animações CSS puras.</div>
+      <div class="proj-tags"><span class="ptag h">HTML</span><span class="ptag c">CSS</span></div>
+    </div>
+    <div class="proj">
+      <div class="proj-header"><span class="proj-num">04 —</span><span class="proj-arrow">↗</span></div>
+      <div class="proj-title">App de Clima</div>
+      <div class="proj-desc">Geolocalização, cache local e modo escuro consumindo API aberta.</div>
+      <div class="proj-tags"><span class="ptag h">HTML</span><span class="ptag c">CSS</span><span class="ptag j">JS</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="contact-bar" id="contact">
+  <div class="contact-text">
+    <div class="t">Vamos <span class="grad-text">trabalhar juntos?</span></div>
+    <div class="s">Aberto a freelas, vagas CLT/PJ e parcerias.</div>
+  </div>
+  <div class="contact-right">
+    <div class="email-pill">lucas.dias@dev.com</div>
+    <div class="social-row">
+      <a class="soc" href="#">GitHub</a>
+      <a class="soc" href="#">LinkedIn</a>
+      <a class="soc" href="#">Twitter</a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="foot-copy">© 2026 Lucas Dias — feito com HTML, CSS &amp; JS</div>
+  <div class="foot-copy" style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">lucas.dev</div>
+</footer>
+
+<script src="./js/script.js"></script>
+
+</body>
+</html>
