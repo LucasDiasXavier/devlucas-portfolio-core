@@ -41,3 +41,42 @@ skills.forEach(sk => {
     pills.style.opacity = '0';
   });
 });
+
+// Seleciona todos os elementos com a classe 'dot' (os indicadores de navegação)
+const dots = document.querySelectorAll('.dot');
+
+// Seleciona todos os elementos com a classe 'proj' (os cards de projeto)
+const card = document.querySelectorAll('.proj');
+
+// Função que exibe o card correspondente ao índice fornecido
+function showcard(index) {
+
+  // Esconde todos os cards adicionando a classe 'hidden'
+  card.forEach(c => c.classList.add('hidden'));
+
+  // Exibe apenas o card do índice selecionado
+  card[index].classList.remove('hidden');
+
+  // Remove a classe 'active' de todos os dots
+  dots.forEach(d => d.classList.remove('active'));
+
+  // Marca como ativo apenas o dot correspondente ao índice
+  dots[index].classList.add('active');
+
+}
+
+// Adiciona um listener de clique em cada dot
+dots.forEach(dot => {
+  dot.addEventListener('click', () => {
+
+    // Lê o atributo 'data-index' do dot clicado e converte para número
+    const index = Number(dot.dataset.index);
+
+    // Chama a função para exibir o card desse índice
+    showcard(index);
+  });
+
+});
+
+// Exibe o primeiro card ao carregar a página (índice 0)
+showcard(0);
