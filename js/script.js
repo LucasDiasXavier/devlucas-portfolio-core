@@ -37,7 +37,7 @@ skills.forEach(sk => {
 
   // Quando o mouse entra no card, exibe as pills
   sk.addEventListener('mouseenter', () => {
-    pills.style.opacity = '0';
+    pills.style.opacity = '1';
   });
 
   // Quando o mouse sai do card, oculta as pills
