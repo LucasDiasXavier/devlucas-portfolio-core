@@ -277,7 +277,7 @@ body {
   right: -8%;
 }
 
-.float-badge .dot {
+.float-badge .dot-badge {
   width: 7px;
   height: 7px;
   border-radius: 50%;
@@ -378,8 +378,9 @@ body {
 }
 
 .proj-thumb {
+  position: relative;
   width: 100%;
-  height: 600px;
+  aspect-ratio: 4 / 3;   /* proporção consistente em qualquer largura */
   overflow: hidden;
   border-radius: 8px;
   margin-bottom: 1rem;
@@ -387,9 +388,9 @@ body {
 
 .proj-thumb img {
   width: 100%;
-  height: 200px;
-  min-height: 628px;
+  height: 620px;           /* preenche o container definido pelo aspect-ratio */
   object-fit: cover;
+  display: block;
   transition: transform 0.3s ease;
 }
 
@@ -397,11 +398,26 @@ body {
   transform: scale(1.05); /* zoom suave ao hover */
 }
 
+/* ✅ Seleciona .proj-gif dentro de .proj-thumb no hover */
+.proj-thumb:hover .proj-gif {
+  opacity: 1;
+}
+
+.proj-gif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+
 .proj-grid {
   gap: 1px;
   background: rgba(255, 255, 255, .06);
-  /* position:relative; */
-  /* height: 500px; */
 }
 
 .proj {
@@ -411,7 +427,6 @@ body {
   flex-direction: column;
   gap: .7rem;
   transition: background .2s;
-  /* position:absolute; */
   width: 100%;
 }
 
@@ -479,13 +494,13 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, .2);
+  background: rgba(255, 255, 255, 0.274);
   cursor: pointer;
   transition: background .3s;
   display: inline-block;
 }
 
-.dot .active{
+.dot.active{
 
   background: #fff;
 }
@@ -641,7 +656,6 @@ body {
   .projects  { padding: 0 1.2rem 2.5rem; }
   .proj-grid { grid-template-columns: 1fr; }
   .proj      { padding: 1.4rem 1.2rem; }
-  .proj-thumb { height: 600px;}
 
   .contact-bar {
     margin: 0 1.2rem;

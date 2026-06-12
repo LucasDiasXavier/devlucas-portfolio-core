@@ -1,3 +1,5 @@
+// mostra toggle de menu em mobile
+
 // Abre ou fecha o menu mobile alternando a classe 'open'
 function toggleMenu() {
   const m = document.getElementById('mobileMenu');
@@ -23,6 +25,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
+// adiciona um listener para o evento de mostrar e ocultar items de skill
+
   // Seleciona todos os cards de skill
 const skills = document.querySelectorAll('.sk');
 
@@ -33,7 +37,7 @@ skills.forEach(sk => {
 
   // Quando o mouse entra no card, exibe as pills
   sk.addEventListener('mouseenter', () => {
-    pills.style.opacity = '1';
+    pills.style.opacity = '0';
   });
 
   // Quando o mouse sai do card, oculta as pills
@@ -41,6 +45,8 @@ skills.forEach(sk => {
     pills.style.opacity = '0';
   });
 });
+
+// carrosel de cards com navegação por dots
 
 // Seleciona todos os elementos com a classe 'dot' (os indicadores de navegação)
 const dots = document.querySelectorAll('.dot');
@@ -63,7 +69,10 @@ function showcard(index) {
   // Marca como ativo apenas o dot correspondente ao índice
   dots[index].classList.add('active');
 
-}
+};
+
+// Registra eventos de clique nos dots para navegar entre os 
+// cards via índice e inicializa o carrossel exibindo o primeiro card.
 
 // Adiciona um listener de clique em cada dot
 dots.forEach(dot => {
@@ -80,3 +89,21 @@ dots.forEach(dot => {
 
 // Exibe o primeiro card ao carregar a página (índice 0)
 showcard(0);
+
+const projthumbs = document.querySelectorAll('.proj-thumb');
+
+projthumbs.forEach(projthumb => {
+
+  const gif = projthumb.querySelector('.proj-gif');
+
+  if (!gif) return; // ← pula se não tiver GIF
+
+  projthumb.addEventListener('mouseenter', () => {
+    gif.style.opacity = '1';
+  });
+
+  projthumb.addEventListener('mouseleave', () => {
+    gif.style.opacity = '0';
+  });
+
+});
