@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="pt-br">
-  <!--
+<!--
     PORTFOLIO — Lucas Dias | Frontend Developer
     Estrutura semântica:
       1. <head>    — Meta, título, folhas de estilo
@@ -18,498 +18,409 @@
       - script.js    → ./js/script.js
   -->
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lucas Dias — Portfolio Frontend Developer</title>
-    <meta name="description" content="Portfolio de Lucas Dias, Frontend Developer especializado em interfaces funcionais de alto padrão." />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucas Dias — Portfolio Frontend Developer</title>
+  <meta name="description"
+    content="Portfolio de Lucas Dias, Frontend Developer especializado em interfaces funcionais de alto padrão." />
 
-    <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
 
-    <!-- Devicon: ícones das tecnologias usadas na seção #skills -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-  </head>
+  <!-- Devicon: ícones das tecnologias usadas na seção #skills -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
 
-  <body>
-    <!-- ============================================================
-       CABEÇALHO DO SITE
-       <header> marca o topo da página com a identidade e navegação
-       principal. Contém a <nav> com aria-label para diferenciá-la
-       de outras navegações secundárias que possam existir.
-       ============================================================ -->
-    <header class="site-header">
-      <nav class="nav" aria-label="Navegação principal">
-        <!-- Identidade / logo -->
-        <a href="#hero" class="logo" aria-label="Lucas Dias — ir para o início">
-          &lt;Lucas Dias/&gt;
-        </a>
+<body>
+  <!-- ====== CABEÇALHO DO SITE ====================== -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
 
-        <!-- Links de navegação — visíveis em desktop -->
-        <ul class="nav-links" role="list">
-          <li><a href="#hero">Início</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projetos</a></li>
-          <li><a href="#contact">Contato</a></li>
-        </ul>
+      <!-- LOGO -->
+      <a href="#hero" class="logo" aria-label="Lucas Dias — ir para o início">
+        &lt;Lucas Dias/&gt;
+      </a>
 
-        <!-- Botão hamburguer — exibido apenas em mobile via CSS.
-             Usa <button> pois é uma ação interativa, não um link.
-             aria-expanded e aria-controls conectam o botão ao painel. -->
-        <button
-          class="hamburger"
-          id="hamburger"
-          type="button"
-          aria-label="Abrir menu de navegação"
-          aria-expanded="false"
-          aria-controls="mobileMenu"
-          onclick="toggleMenu()"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </button>
-      </nav>
+      <!-- Links de navegação — visíveis em desktop -->
+      <ul class="nav-links" role="list">
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
 
-      <!-- Menu mobile — painel deslizante
+      <!-- ======  Botão hamburguer — exibido apenas em mobile via CSS. -->
+      <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menu de navegação" aria-expanded="false"
+        aria-controls="mobileMenu" onclick="toggleMenu()">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </nav>
+
+    <!-- Menu mobile — painel deslizante
            role="dialog" + aria-modal indicam que é um painel modal de navegação.
            aria-label nomeia o dialog para leitores de tela. -->
-      <nav
-        class="mobile-menu"
-        id="mobileMenu"
-        aria-label="Menu mobile"
-        aria-hidden="true"
-      >
-        <ul role="list">
-          <li><a href="#hero"     onclick="closeMenu()">Início</a></li>
-          <li><a href="#skills"   onclick="closeMenu()">Skills</a></li>
-          <li><a href="#projects" onclick="closeMenu()">Projetos</a></li>
-          <li><a href="#contact"  onclick="closeMenu()">Contato</a></li>
-        </ul>
-      </nav>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#hero" onclick="closeMenu()">Início</a></li>
+        <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+        <li><a href="#projects" onclick="closeMenu()">Projetos</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Contato</a></li>
+      </ul>
+    </nav>
 
-      <!-- Linha decorativa com gradiente abaixo da navbar -->
-      <!-- <hr> semântico substitui o <div class="grad-line">.
+    <!-- Linha decorativa com gradiente abaixo da navbar -->
+    <!-- <hr> semântico substitui o <div class="grad-line">.
            role="presentation" indica que é puramente decorativo. -->
-      <hr class="grad-line" role="presentation" />
-    </header>
+    <hr class="grad-line" role="presentation" />
+  </header>
 
-    <!-- ============================================================
+  <!-- ============================================================
        CONTEÚDO PRINCIPAL
        <main> envolve todo o conteúdo central da página.
        Há apenas um <main> por página (landmark único).
        ============================================================ -->
-    <main>
+  <main>
 
-      <!-- ----------------------------------------------------------
+    <!-- ----------------------------------------------------------
          SEÇÃO HERO — Apresentação principal
          aria-labelledby conecta a seção ao seu <h1>, dando
          nome semântico acessível ao landmark de seção.
          ---------------------------------------------------------- -->
-      <section class="hero" id="hero" aria-labelledby="hero-heading">
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
 
-        <!-- Bloco de texto e CTAs -->
-        <div class="hero-content">
-          <!-- Badge de disponibilidade — <p> com role de status é mais
+      <!-- Bloco de texto e CTAs -->
+      <div class="hero-content">
+        <!-- Badge de disponibilidade — <p> com role de status é mais
                semântico que <div> sem significado -->
-          <p class="hero-badge" role="status">Disponível para projetos</p>
+        <p class="hero-badge" role="status">Disponível para projetos</p>
 
-          <h1 class="hero-title" id="hero-heading">
-            Olá, sou<br />
-            <span class="grad-text">Lucas Dias</span><br />
-            dev frontend.
-          </h1>
+        <h1 class="hero-title" id="hero-heading">
+          Olá, sou<br />
+          <span class="grad-text">Lucas Dias</span><br />
+          dev frontend.
+        </h1>
 
-          <p class="hero-sub">
-            Frontend Developer especializado em interfaces funcionais de alto padrão.
-          </p>
+        <p class="hero-sub">
+          Frontend Developer especializado em interfaces funcionais de alto padrão.
+        </p>
 
-          <!-- <div> de botões com role="group" e aria-label agrupa as ações -->
-          <div class="btns" role="group" aria-label="Ações principais">
-            <!-- type="button" previne submit acidental em formulários -->
-            <button
-              class="btn-main"
-              type="button"
-              onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })"
-            >
-              Ver projetos <span aria-hidden="true">→</span>
-            </button>
+        <!-- <div> de botões com role="group" e aria-label agrupa as ações -->
+        <div class="btns" role="group" aria-label="Ações principais">
+          <!-- type="button" previne submit acidental em formulários -->
+          <button class="btn-main" type="button"
+            onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">
+            Ver projetos <span aria-hidden="true">→</span>
+          </button>
 
-            <!-- <a> com href seria mais semântico para download de arquivo,
+          <!-- <a> com href seria mais semântico para download de arquivo,
                  mas mantido como button pois o href ainda não está definido -->
-            <button class="btn-ghost" type="button">
-              Baixar CV
-            </button>
+          <button class="btn-ghost" type="button">
+            Baixar CV
+          </button>
+        </div>
+      </div>
+
+      <!-- Bloco visual do avatar — aria-hidden oculta conteúdo decorativo
+             de leitores de tela, pois não agrega informação nova -->
+      <figure class="avatar-area" aria-hidden="true">
+        <div class="avatar-wrap">
+          <div class="avatar-ring">
+            <div class="avatar-inner">
+              <abbr class="avatar-initials" title="Lucas Dias">LD</abbr>
+              <p class="avatar-role">frontend dev</p>
+            </div>
+          </div>
+
+          <!-- Badges flutuantes decorativos -->
+          <div class="float-badge tl" aria-hidden="true">
+            <span class="dot-badge" style="background: #e34f26"></span>HTML5
+          </div>
+          <div class="float-badge br" aria-hidden="true">
+            <span class="dot-badge" style="background: #f7df1e"></span>JavaScript
           </div>
         </div>
+      </figure>
+    </section>
 
-        <!-- Bloco visual do avatar — aria-hidden oculta conteúdo decorativo
-             de leitores de tela, pois não agrega informação nova -->
-        <figure class="avatar-area" aria-hidden="true">
-          <div class="avatar-wrap">
-            <div class="avatar-ring">
-              <div class="avatar-inner">
-                <abbr class="avatar-initials" title="Lucas Dias">LD</abbr>
-                <p class="avatar-role">frontend dev</p>
-              </div>
-            </div>
+    <!-- Separador semântico entre seções -->
+    <hr class="divider" role="presentation" />
 
-            <!-- Badges flutuantes decorativos -->
-            <div class="float-badge tl" aria-hidden="true">
-              <span class="dot-badge" style="background: #e34f26"></span>HTML5
-            </div>
-            <div class="float-badge br" aria-hidden="true">
-              <span class="dot-badge" style="background: #f7df1e"></span>JavaScript
-            </div>
-          </div>
-        </figure>
-      </section>
-
-      <!-- Separador semântico entre seções -->
-      <hr class="divider" role="presentation" />
-
-      <!-- ----------------------------------------------------------
+    <!-- ----------------------------------------------------------
          SEÇÃO SKILLS — Tecnologias
          ---------------------------------------------------------- -->
-      <section class="skills" id="skills" aria-labelledby="skills-heading">
-        <p class="sec-label" aria-hidden="true">// habilidades</p>
+    <section class="skills" id="skills" aria-labelledby="skills-heading">
+      <p class="sec-label" aria-hidden="true">// habilidades</p>
 
-        <h2 class="sec-title" id="skills-heading">
-          As tecnologias<br />que <span class="grad-text">domino</span>.
-        </h2>
+      <h2 class="sec-title" id="skills-heading">
+        As tecnologias<br />que <span class="grad-text">domino</span>.
+      </h2>
 
-        <!-- <ul> é o elemento correto para uma lista de itens relacionados.
+      <!-- <ul> é o elemento correto para uma lista de itens relacionados.
              Cada <li> contém um card de skill. -->
-        <ul class="skills-row" role="list">
+      <ul class="skills-row" role="list">
 
-          <!-- Skill: HTML5 -->
-          <li class="sk">
-            <!-- <meter> expressa semanticamente uma medida dentro de um range
+        <!-- Skill: HTML5 -->
+        <li class="sk">
+          <!-- <meter> expressa semanticamente uma medida dentro de um range
                  (substitui a div.sk-bar + div.sk-fill puramente visual).
                  Para leitores de tela, o valor é anunciado como porcentagem. -->
-            <meter
-              class="sk-bar"
-              value="100"
-              min="0"
-              max="100"
-              aria-label="Nível de HTML5: 100%"
-            >100%</meter>
+          <meter class="sk-bar" value="100" min="0" max="100" aria-label="Nível de HTML5: 100%">100%</meter>
 
-            <!-- Ícone decorativo: aria-hidden pois o nome já está em sk-name -->
-            <i class="sk-icon devicon-html5-plain colored" aria-hidden="true"></i>
-            <h3 class="sk-name">HTML5</h3>
+          <!-- Ícone decorativo: aria-hidden pois o nome já está em sk-name -->
+          <i class="sk-icon devicon-html5-plain colored" aria-hidden="true"></i>
+          <h3 class="sk-name">HTML5</h3>
 
-            <ul class="sk-pills" role="list" aria-label="Sub-habilidades de HTML5">
-              <li class="pill">Semântica</li>
-              <li class="pill">A11y</li>
-              <li class="pill">SEO</li>
-            </ul>
-          </li>
+          <ul class="sk-pills" role="list" aria-label="Sub-habilidades de HTML5">
+            <li class="pill">Semântica</li>
+            <li class="pill">A11y</li>
+            <li class="pill">SEO</li>
+          </ul>
+        </li>
 
-          <!-- Skill: CSS3 -->
-          <li class="sk">
-            <meter
-              class="sk-bar"
-              value="100"
-              min="0"
-              max="100"
-              aria-label="Nível de CSS3: 100%"
-            >100%</meter>
-            <i class="sk-icon devicon-css3-plain colored" aria-hidden="true"></i>
-            <h3 class="sk-name">CSS3</h3>
-            <ul class="sk-pills" role="list" aria-label="Sub-habilidades de CSS3">
-              <li class="pill">Grid</li>
-              <li class="pill">Flexbox</li>
-            </ul>
-          </li>
+        <!-- Skill: CSS3 -->
+        <li class="sk">
+          <meter class="sk-bar" value="100" min="0" max="100" aria-label="Nível de CSS3: 100%">100%</meter>
+          <i class="sk-icon devicon-css3-plain colored" aria-hidden="true"></i>
+          <h3 class="sk-name">CSS3</h3>
+          <ul class="sk-pills" role="list" aria-label="Sub-habilidades de CSS3">
+            <li class="pill">Grid</li>
+            <li class="pill">Flexbox</li>
+          </ul>
+        </li>
 
-          <!-- Skill: JavaScript -->
-          <li class="sk">
-            <meter
-              class="sk-bar"
-              value="100"
-              min="0"
-              max="100"
-              aria-label="Nível de JavaScript: 100%"
-            >100%</meter>
-            <i class="sk-icon devicon-javascript-plain colored" aria-hidden="true"></i>
-            <h3 class="sk-name">JavaScript</h3>
-            <ul class="sk-pills" role="list" aria-label="Sub-habilidades de JavaScript">
-              <li class="pill">ES6+</li>
-            </ul>
-          </li>
+        <!-- Skill: JavaScript -->
+        <li class="sk">
+          <meter class="sk-bar" value="100" min="0" max="100" aria-label="Nível de JavaScript: 100%">100%</meter>
+          <i class="sk-icon devicon-javascript-plain colored" aria-hidden="true"></i>
+          <h3 class="sk-name">JavaScript</h3>
+          <ul class="sk-pills" role="list" aria-label="Sub-habilidades de JavaScript">
+            <li class="pill">ES6+</li>
+          </ul>
+        </li>
 
-        </ul>
-      </section>
+      </ul>
+    </section>
 
-      <!-- ----------------------------------------------------------
+    <!-- ----------------------------------------------------------
          SEÇÃO PROJETOS
          ---------------------------------------------------------- -->
-      <section class="projects" id="projects" aria-labelledby="projects-heading">
-        <p class="sec-label" aria-hidden="true">// projetos</p>
+    <section class="projects" id="projects" aria-labelledby="projects-heading">
+      <p class="sec-label" aria-hidden="true">// projetos</p>
 
-        <h2 class="sec-title" id="projects-heading" style="margin-bottom: 2rem">
-          O que já <span class="grad-text">construí</span>.
-        </h2>
+      <h2 class="sec-title" id="projects-heading" style="margin-bottom: 2rem">
+        O que já <span class="grad-text">construí</span>.
+      </h2>
 
-        <!-- <ol> (lista ordenada) é adequado pois os projetos são numerados (01, 02…) -->
-        <ol class="proj-grid" role="list">
+      <!-- <ol> (lista ordenada) é adequado pois os projetos são numerados (01, 02…) -->
+      <ol class="proj-grid" role="list">
 
-          <!-- Projeto 01 — <article> pois cada card é um conteúdo independente
+        <!-- Projeto 01 — <article> pois cada card é um conteúdo independente
                e auto-contido que pode ser lido fora do contexto da lista -->
-          <li>
-            <article class="proj" aria-labelledby="proj-title-01">
-              <header class="proj-header">
-                <span class="proj-num" aria-hidden="true">01 —</span>
-                <!-- aria-label descreve o destino do link para leitores de tela.
+        <li>
+          <article class="proj" aria-labelledby="proj-title-01">
+            <header class="proj-header">
+              <span class="proj-num" aria-hidden="true">01 —</span>
+              <!-- aria-label descreve o destino do link para leitores de tela.
                      O texto "↗" é puramente visual, ocultado com aria-hidden -->
-                <a
-                  class="proj-arrow"
-                  href="#"
-                  aria-label="Ver projeto Pousada Secreta (abre link externo)"
-                >
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </header>
+              <a class="proj-arrow" href="#" aria-label="Ver projeto Pousada Secreta (abre link externo)">
+                <span aria-hidden="true">↗</span>
+              </a>
+            </header>
 
-              <h3 class="proj-title" id="proj-title-01">Pousada Secreta</h3>
+            <h3 class="proj-title" id="proj-title-01">Pousada Secreta</h3>
 
-              <figure class="proj-thumb">
-                <img
-                  src="./assets/pousada secreta.png"
-                  alt="Captura de tela do site Pousada Secreta, mostrando a página institucional da pousada"
-                  loading="lazy"
-                  width="600"
-                  height="400"
-                />
-              </figure>
+            <figure class="proj-thumb">
+              <img src="./assets/pousada.png"
+                alt="Captura de tela do site Pousada Secreta, mostrando a página institucional da pousada"
+                loading="lazy" width="600" height="400" />
+            </figure>
 
-              <p class="proj-desc">
-                Site institucional de pousada, apresentando acomodações, localização e contato.
-              </p>
+            <p class="proj-desc">
+              Site institucional de pousada, apresentando acomodações, localização e contato.
+            </p>
 
-              <footer class="proj-tags">
-                <ul role="list" aria-label="Tecnologias utilizadas">
-                  <li><span class="ptag h">HTML</span></li>
-                  <li><span class="ptag c">CSS</span></li>
-                </ul>
-              </footer>
-            </article>
-          </li>
+            <footer class="proj-tags">
+              <ul role="list" aria-label="Tecnologias utilizadas">
+                <li><span class="ptag h">HTML</span></li>
+                <li><span class="ptag c">CSS</span></li>
+              </ul>
+            </footer>
 
-          <!-- Projeto 02 -->
-          <li>
-            <article class="proj hidden" aria-labelledby="proj-title-02">
-              <header class="proj-header">
-                <span class="proj-num" aria-hidden="true">02 —</span>
-                <a
-                  class="proj-arrow"
-                  href="#"
-                  aria-label="Ver projeto Clínica CM Life (abre link externo)"
-                >
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </header>
+          </article>
+        </li>
 
-              <h3 class="proj-title" id="proj-title-02">Clínica CM Life</h3>
+        <!-- Projeto 02 -->
+        <li>
+          <article class="proj hidden" aria-labelledby="proj-title-02">
+            <header class="proj-header">
+              <span class="proj-num" aria-hidden="true">02 —</span>
+              <a class="proj-arrow" href="#" aria-label="Ver projeto Clínica CM Life (abre link externo)">
+                <span aria-hidden="true">↗</span>
+              </a>
+            </header>
 
-              <figure class="proj-thumb">
-                <img
-                  src="./assets/clinica cm life.png"
-                  alt="Captura de tela do site da Clínica CM Life com especialidades médicas"
-                  loading="lazy"
-                  width="600"
-                  height="400"
-                />
-              </figure>
+            <h3 class="proj-title" id="proj-title-02">Clínica CM Life</h3>
 
-              <p class="proj-desc">
-                Clínica médica com especialidades como fisioterapia, ortopedia, pediatria, geriatria e psicologia.
-              </p>
+            <figure class="proj-thumb">
+              <img src="./assets/clinica.jpeg"
+                alt="Captura de tela do site da Clínica CM Life com especialidades médicas" loading="lazy" width="600"
+                height="400" />
+            </figure>
 
-              <footer class="proj-tags">
-                <ul role="list" aria-label="Tecnologias utilizadas">
-                  <li><span class="ptag h">HTML</span></li>
-                  <li><span class="ptag c">CSS</span></li>
-                </ul>
-              </footer>
-            </article>
-          </li>
+            <p class="proj-desc">
+              Clínica médica com especialidades como fisioterapia, ortopedia, pediatria, geriatria e psicologia.
+            </p>
 
-          <!-- Projeto 03 -->
-          <li>
-            <article class="proj hidden" aria-labelledby="proj-title-03">
-              <header class="proj-header">
-                <span class="proj-num" aria-hidden="true">03 —</span>
-                <a
-                  class="proj-arrow"
-                  href="#"
-                  aria-label="Ver projeto Pet Boutique (abre link externo)"
-                >
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </header>
+            <footer class="proj-tags">
+              <ul role="list" aria-label="Tecnologias utilizadas">
+                <li><span class="ptag h">HTML</span></li>
+                <li><span class="ptag c">CSS</span></li>
+              </ul>
+            </footer>
+          </article>
+        </li>
 
-              <h3 class="proj-title" id="proj-title-03">Pet Boutique</h3>
+        <!-- Projeto 03 -->
+        <li>
+          <article class="proj hidden" aria-labelledby="proj-title-03">
+            <header class="proj-header">
+              <span class="proj-num" aria-hidden="true">03 —</span>
+              <a class="proj-arrow" href="#" aria-label="Ver projeto Pet Boutique (abre link externo)">
+                <span aria-hidden="true">↗</span>
+              </a>
+            </header>
 
-              <figure class="proj-thumb">
-                <img
-                  src="./assets/pet boutique.png"
-                  alt="Captura de tela do site Pet Boutique, pet shop com produtos para cães e gatos"
-                  loading="lazy"
-                  width="600"
-                  height="400"
-                />
-              </figure>
+            <h3 class="proj-title" id="proj-title-03">Pet Boutique</h3>
 
-              <p class="proj-desc">
-                Pet shop brasileiro com serviços e produtos para cães e gatos.
-              </p>
+            <figure class="proj-thumb">
+              <img src="./assets/petshop.jpg"
+                alt="Captura de tela do site Pet Boutique, pet shop com produtos para cães e gatos" loading="lazy"
+                width="600" height="400" />
+            </figure>
 
-              <footer class="proj-tags">
-                <ul role="list" aria-label="Tecnologias utilizadas">
-                  <li><span class="ptag h">HTML</span></li>
-                  <li><span class="ptag c">CSS</span></li>
-                </ul>
-              </footer>
-            </article>
-          </li>
+            <p class="proj-desc">
+              Pet shop brasileiro com serviços e produtos para cães e gatos.
+            </p>
 
-          <!-- Projeto 04 -->
-          <li>
-            <article class="proj hidden" aria-labelledby="proj-title-04">
-              <header class="proj-header">
-                <span class="proj-num" aria-hidden="true">04 —</span>
-                <a
-                  class="proj-arrow"
-                  href="#"
-                  aria-label="Ver projeto Manhattan Coffee-House (abre link externo)"
-                >
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </header>
+            <footer class="proj-tags">
+              <ul role="list" aria-label="Tecnologias utilizadas">
+                <li><span class="ptag h">HTML</span></li>
+                <li><span class="ptag c">CSS</span></li>
+              </ul>
+            </footer>
+          </article>
+        </li>
 
-              <h3 class="proj-title" id="proj-title-04">Manhattan Coffee-House</h3>
+        <!-- Projeto 04 -->
+        <li>
+          <article class="proj hidden" aria-labelledby="proj-title-04">
+            <header class="proj-header">
+              <span class="proj-num" aria-hidden="true">04 — Manhattan Coffee-House</span>
+              <a class="proj-arrow" href="#" aria-label="Ver projeto Manhattan Coffee-House (abre link externo)">
+                <span aria-hidden="true">↗</span>
+              </a>
+            </header>
 
-              <figure class="proj-thumb">
-                <img
-                  src="./assets/cafeteria.png"
-                  alt="Captura de tela do site Manhattan Coffee-House com efeito parallax"
-                  loading="lazy"
-                  width="600"
-                  height="400"
-                />
-                <img
-                  src="https://s1.ezgif.com/tmp/ezgif-12dea49ee8f215b3.gif"
-                  class="proj-gif"
-                  alt="Animação do site Manhattan Coffee-House em funcionamento"
-                />
-              </figure>
+            <figure class="proj-thumb">
+              <img src="./assets/café.jpg" alt="Captura de tela do site Manhattan Coffee-House com efeito parallax"
+                loading="lazy" width="600" height="400" />
+            </figure>
 
-              <p class="proj-desc">
-                Site vitrine para uma cafeteria com efeitos parallax.
-              </p>
+            <p class="proj-desc">
+              Site vitrine para uma cafeteria com efeitos parallax.
+            </p>
 
-              <footer class="proj-tags">
-                <ul role="list" aria-label="Tecnologias utilizadas">
-                  <li><span class="ptag h">HTML</span></li>
-                  <li><span class="ptag c">CSS</span></li>
-                </ul>
-              </footer>
-            </article>
-          </li>
+            <footer class="proj-tags">
+              <ul role="list" aria-label="Tecnologias utilizadas">
+                <li>
+                  <i class="devicon-html5-plain colored" aria-label="HTML"></i>
+                </li>
 
-        </ol>
+                <li>
+                  <i class="devicon-css3-plain colored" aria-label="CSS"></i>
+                </li>
+              </ul>
+              <a href="https://github.com/FelipeBritoSP10" target="_blank" rel="noopener noreferrer" class="github-btn">
+                <i class="devicon-github-original"></i>
+                GitHub
+              </a>
+            </footer>
+          </article>
+        </li>
 
-        <!-- Indicadores de paginação / carousel
+      </ol>
+
+      <!-- Indicadores de paginação / carousel
              role="tablist" descreve a função de navegação dos dots -->
-        <nav class="dots" aria-label="Navegação do carrossel de projetos">
-          <button type="button" class="dot" data-index="0" aria-label="Projeto 1" aria-current="true"></button>
-          <button type="button" class="dot" data-index="1" aria-label="Projeto 2"></button>
-          <button type="button" class="dot" data-index="2" aria-label="Projeto 3"></button>
-          <button type="button" class="dot" data-index="3" aria-label="Projeto 4"></button>
-        </nav>
-      </section>
+      <nav class="dots" aria-label="Navegação do carrossel de projetos">
+        <button type="button" class="dot" data-index="0" aria-label="Projeto 1" aria-current="true"></button>
+        <button type="button" class="dot" data-index="1" aria-label="Projeto 2"></button>
+        <button type="button" class="dot" data-index="2" aria-label="Projeto 3"></button>
+        <button type="button" class="dot" data-index="3" aria-label="Projeto 4"></button>
+      </nav>
+    </section>
 
-    </main>
+  </main>
 
-    <!-- ============================================================
+  <!-- ============================================================
        SEÇÃO DE CONTATO — CTA final
        Fora do <main> pois é um bloco de contato global,
        equivalente a um "complementary" ou landmark de contato.
        <address> é semântico para informações de contato do autor.
        ============================================================ -->
-    <section class="contact-bar" id="contact" aria-labelledby="contact-heading">
-      <div class="contact-text">
-        <h2 class="t" id="contact-heading">
-          Vamos <span class="grad-text">trabalhar juntos?</span>
-        </h2>
-        <p class="s">Aberto a freelas, vagas CLT/PJ e parcerias.</p>
-      </div>
+  <section class="contact-bar" id="contact" aria-labelledby="contact-heading">
+    <div class="contact-text">
+      <h2 class="t" id="contact-heading">
+        Vamos <span class="grad-text">trabalhar juntos?</span>
+      </h2>
+      <p class="s">Aberto a freelas, vagas CLT/PJ e parcerias.</p>
+    </div>
 
-      <address class="contact-right">
-        <!-- <address> agrupa informações de contato.
+    <address class="contact-right">
+      <!-- <address> agrupa informações de contato.
              O e-mail como mailto: é mais acessível e funcional que pill puro -->
-        <a class="email-pill" href="mailto:lucasdx1993@gmail.com">
-          lucasdx1993@gmail.com
+      <a class="email-pill" href="mailto:lucasdx1993@gmail.com">
+        lucasdx1993@gmail.com
+      </a>
+
+      <nav class="social-row" aria-label="Redes sociais">
+        <a class="soc" href="https://github.com/LucasDiasXavier" target="_blank" rel="noopener noreferrer"
+          aria-label="Perfil de Lucas Dias no GitHub (abre em nova aba)">
+          GitHub
         </a>
+        <a class="soc" href="https://www.linkedin.com/in/lucas-dias-xavier-517aa8370" target="_blank"
+          rel="noopener noreferrer" aria-label="Perfil de Lucas Dias no LinkedIn (abre em nova aba)">
+          LinkedIn
+        </a>
+        <a class="soc" href="https://wa.me/28999673327?text=Olá%20seja%20bem-vindo!" target="_blank"
+          rel="noopener noreferrer" aria-label="Conversar com Lucas Dias pelo WhatsApp (abre em nova aba)">
+          WhatsApp
+        </a>
+      </nav>
+    </address>
+  </section>
 
-        <nav class="social-row" aria-label="Redes sociais">
-          <a
-            class="soc"
-            href="https://github.com/LucasDiasXavier"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Perfil de Lucas Dias no GitHub (abre em nova aba)"
-          >
-            GitHub
-          </a>
-          <a
-            class="soc"
-            href="https://www.linkedin.com/in/lucas-dias-xavier-517aa8370"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Perfil de Lucas Dias no LinkedIn (abre em nova aba)"
-          >
-            LinkedIn
-          </a>
-          <a
-            class="soc"
-            href="https://wa.me/28999673327?text=Olá%20seja%20bem-vindo!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Conversar com Lucas Dias pelo WhatsApp (abre em nova aba)"
-          >
-            WhatsApp
-          </a>
-        </nav>
-      </address>
-    </section>
-
-    <!-- ============================================================
+  <!-- ============================================================
        RODAPÉ — <footer> representa informações de encerramento.
        Não precisa de classe extra; use o elemento diretamente.
        ============================================================ -->
-    <footer>
-      <small class="foot-copy">
-        <span>© 2026 Lucas Dias — todos os direitos reservados</span>
-        <span
-          class="foot-copy"
-          style="
+  <footer>
+    <small class="foot-copy">
+      <span>© 2026 Lucas Dias — todos os direitos reservados</span>
+      <span class="foot-copy" style="
             background: var(--grad);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-          "
-          aria-label="lucas.dev"
-        >
-          lucas.dev
-        </span>
-      </small>
-    </footer>
+          " aria-label="lucas.dev">
+        lucas.dev
+      </span>
+    </small>
+  </footer>
 
-    <script src="./js/script.js"></script>
-  </body>
+  <script src="./js/script.js"></script>
+</body>
+
 </html>

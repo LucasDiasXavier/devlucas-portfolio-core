@@ -408,174 +408,333 @@ body {
 
 /* ============================================================
    PROJECTS
-   ============================================================ */
+============================================================ */
 
 .projects {
-  padding: 0 2rem 3.5rem;
+  padding: 4rem 2rem;
 }
 
-/* screenshots de página: container fixo em 340px, imagem ancorada no topo */
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.proj-grid li {
+  width: 100%;
+}
+
+.proj {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 1.3rem;
+
+  border-radius: 24px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.04),
+    rgba(255,255,255,.02)
+  );
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  overflow: hidden;
+
+  transition:
+    transform .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
+}
+
+.proj:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(255,255,255,.18);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.45),
+    0 0 0 1px rgba(255,255,255,.04);
+}
+
+.proj.hidden {
+  display: flex;
+}
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.proj-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1rem;
+}
+
+.proj-num {
+  font-family: "Space Mono", monospace;
+  font-size: .8rem;
+  font-weight: 700;
+
+  color: #60a5fa;
+
+  letter-spacing: 2px;
+}
+
+.proj-arrow {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.05);
+
+  color: rgba(255,255,255,.5);
+
+  text-decoration: none;
+
+  transition: .3s;
+}
+
+.proj:hover .proj-arrow {
+  background: #fff;
+  color: #000;
+}
+
+/* ============================================================
+   THUMB
+============================================================ */
+
 .proj-thumb {
   position: relative;
+
   width: 100%;
-  height: 600px;
+  height: 280px;
+
   overflow: hidden;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+
+  border-radius: 18px;
+
+  margin-bottom: 1.2rem;
+
+  background: #111;
 }
 
 .proj-thumb img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+
   object-fit: cover;
-  object-position: top;
-  transition: transform 0.3s ease;
+
+  border-radius: 18px;
+
+  transition: transform .6s ease;
 }
 
 .proj:hover .proj-thumb img {
-  transform: scale(1.05);
+  transform: scale(1.08);
+}
+
+/* GIF overlay */
+
+.proj-gif {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0;
+
+  transition: opacity .4s ease;
 }
 
 .proj-thumb:hover .proj-gif {
   opacity: 1;
 }
 
-.proj-gif {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.3s ease;
-  opacity: 0;
+/* ============================================================
+   TITULO
+============================================================ */
+
+.proj-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  margin-bottom: .5rem;
+
+  color: #fff;
 }
 
-.proj-grid {
-  gap: 1px;
-  background: rgba(255, 255, 255, .06);
-  list-style: none;
-  padding: 0;
+/* ============================================================
+   DESCRIÇÃO
+============================================================ */
+
+.proj-desc {
+  font-size: .95rem;
+  line-height: 1.8;
+
+  color: rgba(255,255,255,.65);
+
+  text-align: left;
+
+  margin-bottom: 1rem;
 }
 
-/* proj-tags agora é footer dentro de article — reset de footer e ul */
+/* ============================================================
+   TAGS
+============================================================ */
+
 .proj-tags {
-  display: flex;
-  gap: .35rem;
-  flex-wrap: wrap;
-  margin-top: .2rem;
+  margin-top: auto;
 }
 
 .proj-tags ul {
   display: flex;
+  gap: .6rem;
   flex-wrap: wrap;
-  gap: .35rem;
+
   list-style: none;
   padding: 0;
-}
-
-/* dots agora é nav com buttons — reset de button */
-.dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 1.5rem;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.274);
-  cursor: pointer;
-  transition: background .3s;
-  display: inline-block;
-  border: none;
-  padding: 0;
-}
-
-.dot.active {
-  background: #fff;
-}
-
-.proj {
-  background: #060608;
-  padding: 1.8rem;
-  display: flex;
-  flex-direction: column;
-  gap: .7rem;
-  transition: background .2s;
-  width: 100%;
-}
-
-.proj.hidden {
-  display: none;
-}
-
-.proj:hover {
-  background: #0d0d12;
-}
-
-.proj-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.proj-num {
-  font-family: 'Space Mono', monospace;
-  font-size: .62rem;
-  color: rgba(255, 255, 255, .25);
-  letter-spacing: 2px;
-}
-
-.proj-arrow {
-  font-size: .9rem;
-  color: rgba(255, 255, 255, .2);
-  transition: color .2s;
-  text-decoration: none;
-}
-
-.proj:hover .proj-arrow {
-  color: #fff;
-}
-
-.proj-title {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: -.3px;
-}
-
-.proj-desc {
-  font-family: 'Space Mono', monospace;
-  font-size: .7rem;
-  color: rgba(255, 255, 255, .4);
-  line-height: 1.7;
-}
-
-/* proj-tags é footer dentro do article — reset de margin/padding padrão */
-.proj > footer {
-  display: flex;
-  gap: .35rem;
-  flex-wrap: wrap;
-  margin-top: .2rem;
-  padding: 0;
-  border: none;
-  background: none;
+  margin: 0;
 }
 
 .ptag {
-  font-family: 'Space Mono', monospace;
-  font-size: .58rem;
-  padding: .2rem .5rem;
+  font-family: "Space Mono", monospace;
+
+  font-size: .75rem;
   font-weight: 700;
+
+  padding: .5rem .9rem;
+
+  border-radius: 999px;
 }
 
-.ptag.h { background: rgba(227, 79, 38, .15);  color: #E34F26; }
-.ptag.c { background: rgba(38, 77, 228, .15);   color: #6B8EF7; }
-.ptag.j { background: rgba(247, 223, 30, .12);  color: #F7DF1E; }
+.ptag.h {
+  background: rgba(227,79,38,.15);
+  color: #E34F26;
+}
 
+.ptag.c {
+  background: rgba(38,77,228,.15);
+  color: #6B8EF7;
+}
+
+.ptag.j {
+  background: rgba(247,223,30,.12);
+  color: #F7DF1E;
+}
+
+/* ============================================================
+   DOTS
+============================================================ */
+
+.dots {
+  display: none;
+}
+
+/* ============================================================
+   RESPONSIVO
+============================================================ */
+
+@media (max-width: 768px) {
+
+  .projects {
+    padding: 3rem 1rem;
+  }
+
+  .proj-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proj-thumb {
+    height: 220px;
+  }
+
+  .proj-title {
+    font-size: 1.2rem;
+  }
+}
+
+.proj-tags {
+  margin-top: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+}
+
+.proj-tags ul {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.proj-tags ul i {
+  font-size: 1.5rem;
+}
+
+.github-btn {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+
+  padding: .7rem 1rem;
+
+  border-radius: 12px;
+
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.08);
+
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: .3s ease;
+}
+
+.github-btn:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.github-btn i {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 480px) {
+  .proj-tags {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .github-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
 
 /* ============================================================
    CONTACT
@@ -768,7 +927,7 @@ footer small,
   .btns              { flex-direction: column; }
   .btn-main,
   .btn-ghost         { width: 100%; text-align: center; }
-
   .avatar-ring     { width: 150px; height: 150px; }
   .avatar-initials { font-size: 2.2rem; }
 }
+
