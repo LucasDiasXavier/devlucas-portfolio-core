@@ -607,7 +607,7 @@ body {
 .proj-tags ul {
   display: flex;
   gap: .6rem;
-  flex-wrap: wrap;
+  
 
   list-style: none;
   padding: 0;
