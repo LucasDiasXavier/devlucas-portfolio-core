@@ -4,15 +4,15 @@ Portfolio pessoal desenvolvido com HTML5, CSS3 e JavaScript puro, sem dependênc
 
 ---
 
-## Tecnologias
+## 🛠️ Tecnologias
 
-* HTML5 semântico e acessível — ARIA, roles e landmarks
-* CSS3 — Grid, Flexbox, variáveis CSS, responsividade mobile-first
-* JavaScript puro — menu mobile, scroll suave, carrossel de projetos
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) 
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) 
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) 
 
 ---
 
-## Como rodar
+## 🚀 Como rodar
 
 Clone o repositório e abra o `index.html` diretamente no navegador. Não precisa de instalação, servidor ou build.
 
@@ -23,7 +23,7 @@ cd devlucas-portfolio-core
 
 ---
 
-## Estrutura
+## 📂 Estrutura
 
 ```
 devlucas-portfolio-core/
@@ -42,7 +42,7 @@ devlucas-portfolio-core/
 
 ---
 
-## Projetos exibidos
+## 💻 Projetos exibidos
 
 * Pousada Secreta — site institucional de pousada em Angra dos Reis
 * Clínica CM Life — clínica médica multiespecialidade com tabelas de horários
@@ -51,15 +51,15 @@ devlucas-portfolio-core/
 
 ---
 
-## Contato
+## 💬 Vamos conversar?
 
-* E-mail: lucasdias.tech@gmail.com
-* LinkedIn: linkedin.com/in/lucas-dias-xavier-517aa8370
-* GitHub: github.com/LucasDiasXavier
-* WhatsApp: wa.me/28999673327
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-dias-xavier-517aa8370)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LucasDiasXavier)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/28999673327)
+[![Email](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lucasdias.tech@gmail.com)
 
 ---
 
-## Status
+## 🚥 Status
 
 🚧 Em desenvolvimento
