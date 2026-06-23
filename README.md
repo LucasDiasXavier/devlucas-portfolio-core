@@ -88,10 +88,9 @@ devlucas-portfolio-core/
 
 ## Contato
 
-* E-mail: lucasdias.tech@gmail.com
-* LinkedIn: linkedin.com/in/lucas-dias-xavier
-* GitHub: github.com/LucasDiasXavier
-* WhatsApp: wa.me/28999673327
+* E-mail: [lucasdias.tech@gmail.com](mailto:lucasdias.tech@gmail.com)
+* LinkedIn: [linkedin.com/in/lucas-dias-xavier](https://www.linkedin.com/in/lucas-dias-xavier)
+* WhatsApp: [wa.me/28999673327](https://wa.me/28999673327)
 
 ---
 
