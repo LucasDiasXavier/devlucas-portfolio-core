@@ -8,30 +8,30 @@ Portfolio pessoal desenvolvido com HTML5, CSS3 e JavaScript puro, sem dependênc
 
 * HTML5 semântico e acessível — ARIA, roles e landmarks
 * CSS3 — Grid, Flexbox, variáveis CSS, responsividade mobile-first
-* JavaScript puro — menu mobile, scroll suave, carrossel de projetos, carregamento dinâmico de componentes
+* JavaScript puro — menu mobile, scroll suave, carrossel de projetos
 
 ---
 
-## Como rodar
+## 🚀 Como rodar
 
 Este projeto usa `fetch()` para carregar os componentes HTML, por isso **não pode ser aberto direto pelo navegador** (`file://`) — é necessário um servidor local.
 
-```bash
+````bash
 git clone https://github.com/LucasDiasXavier/devlucas-portfolio-core.git
 cd devlucas-portfolio-core
-```
+````
 
 Depois, abra a pasta no VS Code e rode com a extensão **Live Server** (botão direito em `index.html` → "Open with Live Server"), ou qualquer outro servidor estático de sua preferência:
 
-```bash
+````bash
 npx serve
-```
+````
 
 ---
 
-## Estrutura
+## 📂 Estrutura
 
-```
+````
 devlucas-portfolio-core/
 ├── index.html
 ├── components/
@@ -64,7 +64,7 @@ devlucas-portfolio-core/
 │   ├── petshop.jpg
 │   └── cafe.jpg
 └── README.md
-```
+````
 
 ### Como funciona a separação por componentes
 
@@ -76,7 +76,7 @@ devlucas-portfolio-core/
 
 ---
 
-## Projetos exibidos
+## 💻 Projetos exibidos
 
 * **Pousada Secreta** — site institucional de pousada, com acomodações, localização e contato
 * **Clínica CM Life** — clínica médica multiespecialidade (fisioterapia, ortopedia, pediatria, geriatria, psicologia)
@@ -88,13 +88,13 @@ devlucas-portfolio-core/
 
 ## Contato
 
-* 📧 E-mail: [lucasdias.tech@gmail.com](mailto:lucasdias.tech@gmail.com)
-* 💼 LinkedIn: [linkedin.com/in/lucas-dias-xavier-517aa8370](https://www.linkedin.com/in/lucas-dias-xavier)
-* 🐙 GitHub: [github.com/LucasDiasXavier](https://github.com/LucasDiasXavier)
-* 💬 WhatsApp: [wa.me/28999673327](https://wa.me/28999673327)
+* E-mail: lucasdias.tech@gmail.com
+* LinkedIn: linkedin.com/in/lucas-dias-xavier
+* GitHub: github.com/LucasDiasXavier
+* WhatsApp: wa.me/28999673327
 
 ---
 
-## Status
+## 🚥 Status
 
 🚧 Em desenvolvimento
