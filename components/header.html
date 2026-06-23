@@ -1,0 +1,34 @@
+ <!-- ===== CABEÇALHO ===== -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#hero" class="logo" aria-label="Lucas Dias — ir para o início">&lt;Lucas Dias/&gt;</a>
+
+      <!-- Menu desktop -->
+      <ul class="nav-links" role="list">
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+
+      <!-- Botão hamburguer (mobile) -->
+      <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menu de navegação"
+        aria-expanded="false" aria-controls="mobileMenu" onclick="toggleMenu()">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </nav>
+
+    <!-- Menu mobile (painel deslizante) -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#hero" onclick="closeMenu()">Início</a></li>
+        <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+        <li><a href="#projects" onclick="closeMenu()">Projetos</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Contato</a></li>
+      </ul>
+    </nav>
+
+    <hr class="grad-line" role="presentation" /> <!-- linha decorativa -->
+  </header>

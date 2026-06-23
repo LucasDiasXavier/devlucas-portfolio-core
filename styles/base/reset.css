@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #060608;
+  color: #fff;
+  font-family: 'Clash Display', sans-serif;
+  overflow-x: hidden;
+}

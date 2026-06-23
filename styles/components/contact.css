@@ -1,0 +1,71 @@
+
+.contact-bar {
+  margin: 0 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg,
+    rgba(227, 79, 38, .08),
+    rgba(38, 77, 228, .08),
+    rgba(247, 223, 30, .06)
+  );
+  border: 1px solid rgba(255, 255, 255, .06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-text .t {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: -.5px;
+}
+
+.contact-text .s {
+  font-family: 'Space Mono', monospace;
+  font-size: .7rem;
+  color: rgba(255, 255, 255, .4);
+  margin-top: .35rem;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  align-items: flex-end;
+}
+
+.email-pill {
+  font-family: 'Space Mono', monospace;
+  font-size: .7rem;
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(255, 255, 255, .1);
+  padding: .45rem .9rem;
+  color: rgba(255, 255, 255, .6);
+  text-decoration: none;
+  display: inline-block;
+  transition: color .2s, border-color .2s;
+}
+
+.email-pill:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, .3);
+}
+
+.social-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.soc {
+  font-family: 'Space Mono', monospace;
+  font-size: .62rem;
+  color: rgba(255, 255, 255, .35);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color .2s;
+}
+
+.soc:hover {
+  color: #fff;
+}

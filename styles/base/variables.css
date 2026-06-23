@@ -1,0 +1,4 @@
+:root {
+  --grad: linear-gradient(135deg, #E34F26 0%, #9B3FD4 40%, #264DE4 70%, #F7DF1E 100%);
+  --grad2: linear-gradient(90deg, #E34F26, #264DE4, #F7DF1E);
+}

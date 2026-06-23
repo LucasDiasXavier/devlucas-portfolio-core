@@ -1,0 +1,38 @@
+  <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero-content">
+        <p class="hero-badge" role="status">Disponível para projetos</p>
+
+        <h1 class="hero-title" id="hero-heading">
+          Olá, sou<br />
+          <span class="grad-text">Lucas Dias</span><br />
+          dev frontend.
+        </h1>
+
+        <p class="hero-sub">Frontend Developer especializado em interfaces funcionais de alto padrão.</p>
+
+        <div class="btns" role="group" aria-label="Ações principais">
+          <button class="btn-main" type="button"
+            onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">
+            Ver projetos <span aria-hidden="true">→</span>
+          </button>
+          <!-- TODO: definir href do CV e trocar para <a download> -->
+          <a href="./assets/curriculo.pdf" class="btn-ghost" type="button" download>Baixar CV</a>
+        </div>
+      </div>
+
+      <!-- Avatar decorativo: oculto de leitores de tela pois duplica info já lida no hero -->
+      <figure class="avatar-area" aria-hidden="true">
+        <div class="avatar-wrap">
+          <div class="avatar-ring">
+            <div class="avatar-inner">
+              <abbr class="avatar-initials" title="Lucas Dias">LD</abbr>
+              <p class="avatar-role">frontend dev</p>
+            </div>
+          </div>
+          <div class="float-badge tl"><span class="dot-badge" style="background: #e34f26"></span>HTML5</div>
+          <div class="float-badge br"><span class="dot-badge" style="background: #f7df1e"></span>JavaScript</div>
+        </div>
+      </figure>
+    </section>
+
+    <hr class="divider" role="presentation" />
