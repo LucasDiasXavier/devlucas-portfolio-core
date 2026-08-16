@@ -60,6 +60,8 @@ devlucas-portfolio-core/
 │   └── script.js            (menu mobile, scroll, carrossel, hovers)
 ├── assets/
 │   ├── pousada.png
+│   ├── britoflix.jpg
+│   ├── autisteps.jpeg
 │   ├── clinica.jpeg
 │   ├── petshop.jpg
 │   └── cafe.jpg
